@@ -1,0 +1,7 @@
+* npm init -y  - команда разворачивает package.json (с подтвержденными дефолтными настройками)
+* npm i ..... - установить webpak в проект и webpakcli
+
+* webpack.config.ts - главный файл настройки вебпака
+* webpack - команда в терменале запускающая webpack
+
+module.exports - старый синтаксис сборки comonJS

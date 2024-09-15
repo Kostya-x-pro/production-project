@@ -1,0 +1,25 @@
+// "esModuleInterop":  - позволяет работать с пакетами которые используют comonJS как с обычными пакетами import
+// "allowSyntheticDefaultImports": - если какая то библеотека не имеет default import то она нам позволяет это добавить что бы не писать import * as React from 'react'  (можно писать import React from 'react')
+// "allowJs":  Компилятор будет обрабатывать нет только TS файлы но и JS
+// jsx - для конструкций реакта
+// noImplicitAny - оно не позволяет использовать переменные без явного указания типа
+// outDir - то куда производится сборка
+
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "module": "es6",
+    "target": "es5",
+    "jsx": "react",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}
