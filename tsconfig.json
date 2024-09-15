@@ -4,6 +4,7 @@
 // jsx - для конструкций реакта
 // noImplicitAny - оно не позволяет использовать переменные без явного указания типа
 // outDir - то куда производится сборка
+// baseUrl - для абсолютного импорта
 
 {
   "compilerOptions": {
@@ -15,7 +16,8 @@
     "allowJs": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "baseUrl": "."
   },
   "ts-node": {
     "compilerOptions": {
