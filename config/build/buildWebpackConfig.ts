@@ -1,14 +1,14 @@
 import { BuildOptions } from "./types/config";
 import webpack from 'webpack';
-import path from "path";
 
 import { buildPluginststs } from "./buildPlugins";
 import { buildLoaders } from './buildLoaders';
 import { buildResolvers } from './buildResolvers';
+import { BuildDevServer } from "./buildDevServer";
 
 
 export function buildWebpackConfig(options: BuildOptions): webpack.Configuration {
-  const {path, mode} = options
+  const {path, mode, isDev} = options
 
   return {
     mode,
@@ -27,5 +27,7 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
     // resolve - поле для того что бы когда мы импортируем файлы мы не указывали в конце расширение
     // import Component from 'component/'
     resolve: buildResolvers(),
+    devtool: isDev ? 'inline-source-map' : undefined ,
+    devServer: isDev ? BuildDevServer(options) : undefined,
   }
 }
