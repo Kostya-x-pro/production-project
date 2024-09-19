@@ -1,11 +1,10 @@
 import { BuildOptions } from "./types/config";
 import webpack from 'webpack';
 
-import { buildPluginststs } from "./buildPlugins";
+import { buildPlugins } from "./buildPlugins";
 import { buildLoaders } from './buildLoaders';
 import { buildResolvers } from './buildResolvers';
 import { BuildDevServer } from "./buildDevServer";
-
 
 export function buildWebpackConfig(options: BuildOptions): webpack.Configuration {
   const {path, mode, isDev} = options
@@ -19,10 +18,10 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
       path: path.build, 
       clean: true  // опция чистки ненужных файлов при сборке
     },
-    plugins: buildPluginststs(options),
+    plugins: buildPlugins(options),
     module: {
       // rules - конфигруция для обработки всех файлов не js
-      rules: buildLoaders(),
+      rules: buildLoaders(options),
     },
     // resolve - поле для того что бы когда мы импортируем файлы мы не указывали в конце расширение
     // import Component from 'component/'
