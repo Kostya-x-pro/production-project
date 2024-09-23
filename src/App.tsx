@@ -6,12 +6,14 @@ import { AboutPageAsync } from './pages/AboutPage/AboutPage.async';
 import { MainPageAsync } from './pages/Mainpage/MainPage.async';
 
 import './styles/index.scss';
+import { classNames } from './helpers/classNames/classNames';
 
 const App = () => {
   const {theme, toggleTheme} = useTheme();
+  const bool = true;
 
   return (
-    <div className={`app ${theme}`}>
+    <div className={classNames('app', {}, [theme])}>
       <button onClick={toggleTheme}>Toglle Theme</button>
       <Link to="/">Главная страница</Link>
       <Link to="/about">О сайте</Link>
