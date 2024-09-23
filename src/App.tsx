@@ -1,18 +1,18 @@
 import { Route, Routes, Link } from 'react-router-dom';
 import { Suspense } from 'react';
-// import Counter from './components/Counter';
-// import AboutPage from './pages/AboutPage/AboutPage';
-// import MainPage from './pages/Mainpage/MainPage';
 
-
+import { useTheme } from './theme/useTheme';
 import { AboutPageAsync } from './pages/AboutPage/AboutPage.async';
 import { MainPageAsync } from './pages/Mainpage/MainPage.async';
 
-import './index.scss';
+import './styles/index.scss';
 
 const App = () => {
+  const {theme, toggleTheme} = useTheme();
+
   return (
-    <div className="app">
+    <div className={`app ${theme}`}>
+      <button onClick={toggleTheme}>Toglle Theme</button>
       <Link to="/">Главная страница</Link>
       <Link to="/about">О сайте</Link>
 
