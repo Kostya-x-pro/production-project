@@ -25,7 +25,7 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
     },
     // resolve - поле для того что бы когда мы импортируем файлы мы не указывали в конце расширение
     // import Component from 'component/'
-    resolve: buildResolvers(),
+    resolve: buildResolvers(options),
     devtool: isDev ? 'inline-source-map' : undefined ,
     devServer: isDev ? BuildDevServer(options) : undefined,
   }

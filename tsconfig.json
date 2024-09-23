@@ -5,6 +5,7 @@
 // noImplicitAny - оно не позволяет использовать переменные без явного указания типа
 // outDir - то куда производится сборка
 // baseUrl - для абсолютного импорта
+// paths - с такой конфигурацие упрощает работу с экспортами и импортами (все экспорты и импорты будут идти из папки src)
 
 {
   "compilerOptions": {
@@ -17,7 +18,10 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./src/*"]
+    }
   },
   "ts-node": {
     "compilerOptions": {
