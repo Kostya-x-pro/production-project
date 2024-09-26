@@ -6,5 +6,6 @@ export function BuildDevServer(options: BuildOptions): DevServerConfiguration {
     port: options.port,
     open: true,
     historyApiFallback: true, // для настройки корневого роутинга
+    hot: true, 
   }
 }
