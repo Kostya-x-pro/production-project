@@ -4,5 +4,7 @@
   "Загрузка": "Loading",
     "О сайте": "About page",
   "Главная страница": "Main Page",
-  "Страница не найдена": "Page not found"
+  "Страница не найдена": "Page not found",
+    "Произошла непредвиденная ошибка": "An unexpected error occurred",
+  "Обновить страницу": "Refresh page"
 }
