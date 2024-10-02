@@ -21,7 +21,7 @@ webpack.WebpackPluginInstance[] {
         }),
         new webpack.HotModuleReplacementPlugin(),
         new BundleAnalyzerPlugin({
-            openAnalyzer: false
+            openAnalyzer: false,
         }),
     ];
 }
