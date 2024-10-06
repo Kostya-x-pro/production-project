@@ -6,8 +6,8 @@ import { BuildOptions } from './types/config';
 
 export function buildPlugins({ path, isDev }: BuildOptions):
 webpack.WebpackPluginInstance[] {
-    return [
-    // массив плагинов для подключения например html
+    const plugins = [
+        // массив плагинов для подключения например html
         new HTMLWebpackPlugin({
             template: path.html,
         }),
@@ -19,9 +19,16 @@ webpack.WebpackPluginInstance[] {
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev),
         }),
-        new webpack.HotModuleReplacementPlugin(),
-        new BundleAnalyzerPlugin({
-            openAnalyzer: false,
-        }),
     ];
+
+    if (isDev) {
+        plugins.push(
+            new webpack.HotModuleReplacementPlugin(),
+            new BundleAnalyzerPlugin({
+                openAnalyzer: false,
+            }),
+        );
+    }
+
+    return plugins;
 }
