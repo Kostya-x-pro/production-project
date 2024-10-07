@@ -13,20 +13,7 @@ export const Navbar = ({ className }: NavbarProps) => {
     return (
         <div className={classNames(styles.Navbar, {}, [])}>
             <div className={styles.links}>
-                <AppLink
-                    theme={AppLinkTheme.SECONDARY}
-                    to="/"
-                    className={styles.mainLink}
-                >
-                    {t('Главная страница')}
-                </AppLink>
-                <AppLink
-                    theme={AppLinkTheme.SECONDARY}
-                    // eslint-disable-next-line i18next/no-literal-string
-                    to="/about"
-                >
-                    {t('О сайте')}
-                </AppLink>
+                /
             </div>
         </div>
     );
