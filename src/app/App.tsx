@@ -7,8 +7,6 @@ import { Sidebar } from 'widgets/Sidebar/indext';
 
 import { AppRouter } from './providers/router';
 
-import './styles/index.scss';
-
 const App = () => {
     const { theme } = useTheme();
 
