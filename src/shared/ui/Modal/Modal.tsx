@@ -22,7 +22,7 @@ export const Modal = (props: ModalProps) => {
     } = props;
 
     const [isClosing, setIsClosing] = useState(false);
-    const timeRef = useRef<ReturnType<typeof setInterval>>();
+    const timeRef = useRef<ReturnType<typeof setTimeout>>();
     const { theme } = useTheme(); // Исправить далее
 
     const closeHandler = useCallback(() => {
@@ -51,7 +51,7 @@ export const Modal = (props: ModalProps) => {
         }
 
         return () => {
-            clearInterval(timeRef.current);
+            clearTimeout(timeRef.current);
             window.removeEventListener('keydown', onKeyDown);
         };
     }, [isOpen, onKeyDown]);
