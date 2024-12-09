@@ -23,7 +23,7 @@ export const Modal = (props: ModalProps) => {
 
     const [isClosing, setIsClosing] = useState(false);
     const timeRef = useRef<ReturnType<typeof setTimeout>>();
-    const { theme } = useTheme(); // Исправить далее
+    const { theme } = useTheme();
 
     const closeHandler = useCallback(() => {
         if (isOpen) {
@@ -59,12 +59,11 @@ export const Modal = (props: ModalProps) => {
     const mods: Record<string, boolean> = {
         [styles.opened]: isOpen,
         [styles.isClosing]: isClosing,
-        [styles[theme]]: true, // исправить даелее
     };
 
     return (
         <Portal>
-            <div className={classNames(styles.Modal, mods, [className])}>
+            <div className={classNames(styles.Modal, mods, [className, theme, '.app_modal'])}>
                 <div className={styles.overlay} onClick={closeHandler}>
                     <div className={styles.content} onClick={onContentClick}>
                         {children}
