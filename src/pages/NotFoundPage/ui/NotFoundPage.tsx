@@ -1,7 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 
 import { useTranslation } from 'react-i18next';
-import * as styles from './NotFoundPage.module.scss';
+import * as cls from './NotFoundPage.module.scss';
 
 interface NotFoundPageProps {
   className?: string;
@@ -12,7 +12,7 @@ export const NotFoundPage = ({ className }: NotFoundPageProps) => {
     return (
         <div
             className={classNames(
-                styles.NotFoundPage,
+                cls.NotFoundPage,
                 {},
                 [className],
             )}

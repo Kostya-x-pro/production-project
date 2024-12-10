@@ -2,7 +2,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 
 import { useTranslation } from 'react-i18next';
 import { Button } from 'shared/ui/Button/Button/Button';
-import * as styles from './PageError.module.scss';
+import * as cls from './PageError.module.scss';
 
 interface PageErrorProps {
   className?: string;
@@ -20,7 +20,7 @@ export const PageError = ({ className }: PageErrorProps) => {
 
         <div
             className={classNames(
-                styles.PageError,
+                cls.PageError,
                 {},
                 [className],
             )}
