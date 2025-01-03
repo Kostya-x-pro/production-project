@@ -7,5 +7,7 @@
   "Страница не найдена": "Page not found",
   "Произошла непредвиденная ошибка": "An unexpected error occurred",
   "Обновить страницу": "Refresh page",
-  "Войти": "Login"
+  "Войти": "Login",
+  "Форма": "authorization",
+  "Вы ввели не верный логин или пароль": "You entered an incorrect username or password"
 }
