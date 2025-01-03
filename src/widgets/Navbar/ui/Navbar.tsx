@@ -2,7 +2,6 @@ import { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button/Button';
 import { LoginModal } from 'features/AuthByUsername';
-import { Modal } from 'shared/ui/Modal/Modal';
 
 import { classNames } from 'shared/lib/classNames/classNames';
 
@@ -55,15 +54,12 @@ export const Navbar = ({ className }: NavbarProps) => {
             >
                 {t('Войти')}
             </Button>
-            <LoginModal
-                isOpen={isAutModal}
-                onClose={onCloseModal}
-            />
-            {/* <Modal isOpen={isAutModal} onClose={onCloseModal}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Ea illum voluptatem esse eligendi repudiandae excepturi
-                veritatis earum tempora ut et
-            </Modal> */}
+            { isAutModal && (
+                <LoginModal
+                    isOpen={isAutModal}
+                    onClose={onCloseModal}
+                />
+            )}
         </div>
     );
 };
