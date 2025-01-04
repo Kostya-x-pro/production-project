@@ -13,5 +13,7 @@
   "Выйти": "Exit",
   "Форма авторизации": "Authorization form",
   "Введите имя": "Enter name",
-  "Введите пароль": "Enter password"
+  "Введите пароль": "Enter password",
+  "Главная": "Home",
+  "Профиль": "Profile"
 }
