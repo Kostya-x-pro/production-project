@@ -2,7 +2,7 @@ import React, {
     ReactNode, useCallback, useEffect, useRef, useState,
 } from 'react';
 import { useTheme } from 'app/providers/ThemeProvider';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import { Portal } from '../Portal/Portal';
 
 import * as cls from './Modal.module.scss';
@@ -37,7 +37,7 @@ export const Modal = (props: ModalProps) => {
         if (isOpen) {
             setIsClosing(true);
             timeRef.current = setTimeout(() => {
-                onClose();
+                onClose?.();
                 setIsClosing(false);
             }, ANIMATION_DELAY);
         }
@@ -64,7 +64,7 @@ export const Modal = (props: ModalProps) => {
         };
     }, [isOpen, onKeyDown]);
 
-    const mods: Record<string, boolean> = {
+    const mods: Mods = {
         [cls.opened]: isOpen,
         [cls.isClosing]: isClosing,
     };

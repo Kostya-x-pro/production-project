@@ -1,4 +1,4 @@
-type Mods = Record<string, boolean | string>;
+export type Mods = Record<string, boolean | undefined>;
 
 // Параметры функции:
 // class - главный класс например .app
