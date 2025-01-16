@@ -13,5 +13,10 @@
 "Введите имя пользователя":"Enter username",
 "Введите ссылку на аватар":"Enter a link to your avatar",
 "Укажите валюту":"Specify currency",
-"Укажите страну":"Specify country"
+"Укажите страну":"Specify country",
+"Имя и фамилия обязательны": "First and last name are required",
+"Некорректный возраст": "Incorrect age",
+"Не корректный регион": "Incorrect region",
+"Данные не указанны": "Data not specified",
+"Серверная ошибка при сохранении": "Server error when saving"
 }
