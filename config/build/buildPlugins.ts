@@ -4,7 +4,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import { BuildOptions } from './types/config';
 
-export function buildPlugins({ path, isDev }: BuildOptions):
+export function buildPlugins({ path, isDev, project }: BuildOptions):
 webpack.WebpackPluginInstance[] {
     const plugins = [
         // массив плагинов для подключения например html
@@ -18,6 +18,7 @@ webpack.WebpackPluginInstance[] {
         }),
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev),
+            __PROJECT__: JSON.stringify(project),
         }),
     ];
 

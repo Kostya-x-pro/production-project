@@ -1,4 +1,8 @@
-export { Profile, ProfileSchema, ValidateProfileError } from './model/types/profile';
+export {
+    Profile,
+    ProfileSchema,
+    validateProfileDataError,
+} from './model/types/profile';
 export { profileActions, profileReducer } from './model/slice/profileSlice';
 export { fetchProfileData } from './model/services/fetchProfileData/fetchProfileData';
 export { updateProfileData } from './model/services/updateProfileData/updateProfileData';

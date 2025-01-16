@@ -19,4 +19,9 @@ Light.args = {};
 export const Dark = Template.bind({});
 Dark.args = {};
 
-Dark.decorators = [ThemeDecorator(Theme.DARK)];
+Dark.decorators = [
+    ThemeDecorator(Theme.DARK),
+];
+
+export const NoAuth = Template.bind({});
+NoAuth.args = {};

@@ -12,7 +12,7 @@ import {
     getProfileReadonly,
     getProfileForm,
     getProfileValidateErrors,
-    ValidateProfileError,
+    validateProfileDataError,
 } from 'entities/Profile';
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
@@ -39,15 +39,17 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     const validateErrors = useSelector(getProfileValidateErrors);
 
     const validateErrorsTranslates = {
-        [ValidateProfileError.INCORRECT_USER_DATA]: t('Имя и фамилия обязательны'),
-        [ValidateProfileError.INCORRECT_AGE]: t('Некорректный возраст'),
-        [ValidateProfileError.INCORRECT_COUNTRY]: t('Не корректный регион'),
-        [ValidateProfileError.NO_DATA]: t('Данные не указанны'),
-        [ValidateProfileError.SERVER_ERROR]: t('Серверная ошибка при сохранении'),
+        [validateProfileDataError.INCORRECT_USER_DATA]: t('Имя и фамилия обязательны'),
+        [validateProfileDataError.INCORRECT_AGE]: t('Некорректный возраст'),
+        [validateProfileDataError.INCORRECT_COUNTRY]: t('Не корректный регион'),
+        [validateProfileDataError.NO_DATA]: t('Данные не указанны'),
+        [validateProfileDataError.SERVER_ERROR]: t('Серверная ошибка при сохранении'),
     };
 
     useEffect(() => {
-        dispatch(fetchProfileData());
+        if (__PROJECT__ !== 'storybook') {
+            dispatch(fetchProfileData());
+        }
     }, [dispatch]);
 
     const onChangeFirstName = useCallback((value?: string) => {
