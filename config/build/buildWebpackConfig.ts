@@ -18,6 +18,7 @@ webpack.Configuration {
             filename: '[name].[contenthash].js', // имя в скобках это для минификации файла на выхоже
             path: path.build,
             clean: true, // опция чистки ненужных файлов при сборке
+            publicPath: '/',
         },
         plugins: buildPlugins(options),
         module: {
