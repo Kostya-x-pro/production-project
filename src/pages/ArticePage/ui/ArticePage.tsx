@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 
@@ -17,4 +18,4 @@ const ArticePage = ({ className }: ArticePageProps) => {
     );
 };
 
-export default ArticePage;
+export default memo(ArticePage);
