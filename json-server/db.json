@@ -143,13 +143,13 @@
       "id": "2",
       "text": "some comment 2",
       "articleId": "1",
-      "userId": "1"
+      "userId": "2"
     },
     {
-      "id": "1",
+      "id": "3",
       "text": "some comment 3",
       "articleId": "1",
-      "userId": "2"
+      "userId": "3"
     }
   ],
   "users": [
@@ -157,13 +157,22 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "USER"
+      "role": "USER",
+      "avatar": "https://png.pngtree.com/png-clipart/20231019/original/pngtree-user-profile-avatar-png-image_13369988.png"
     },
     {
       "id": "2",
       "username": "kostya",
       "password": "qwerty",
-      "role": "ADMIN"
+      "role": "ADMIN",
+      "avatar": "https://cs13.pikabu.ru/post_img/big/2023/02/13/8/1676296366191520185.png"
+    },
+    {
+      "id": "3",
+      "username": "user",
+      "password": "123",
+      "role": "USER",
+      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
     }
   ],
   "profile": {
