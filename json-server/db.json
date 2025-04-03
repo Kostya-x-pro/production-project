@@ -11,7 +11,7 @@
       "userId": "2"
     }
   ],
-"articles": [
+  "articles": [
     {
       "id": "1",
       "title": "JavaScript: Итоги 2025 года",
@@ -19,7 +19,9 @@
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUm8GHLl9_MvPWH8Eg3JWDU24rpWptxfpm_w&s",
       "views": 1022,
       "createdAt": "25.01.2025",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -39,7 +41,9 @@
       "img": "https://static-00.iconduck.com/assets.00/typescript-plain-icon-256x256-ypojgpyj.png",
       "views": 875,
       "createdAt": "20.02.2025",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -60,7 +64,10 @@
       "img": "https://e7.pngegg.com/pngimages/789/586/png-clipart-gray-and-green-v-vue-js-logo-icons-logos-emojis-tech-companies-thumbnail.png",
       "views": 642,
       "createdAt": "10.03.2025",
-      "type": ["Frontend", "JavaScript"],
+      "type": [
+        "Frontend",
+        "JavaScript"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -86,7 +93,10 @@
       "img": "https://e7.pngegg.com/pngimages/621/411/png-clipart-computer-icons-python-anaconda-anaconda-angle-other-thumbnail.png",
       "views": 910,
       "createdAt": "05.04.2025",
-      "type": ["Backend", "Python"],
+      "type": [
+        "Backend",
+        "Python"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -112,7 +122,10 @@
       "img": "https://workspace.ru/upload/iblock/3ef/py2ql4xlsx0lzialp58p1mr27rjlqpcd/0.jpg",
       "views": 1500,
       "createdAt": "15.05.2025",
-      "type": ["Web Development", "IT"],
+      "type": [
+        "Web Development",
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -150,6 +163,12 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "3"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "Мой новый комментарий по данному курсу",
+      "id": "ThnAGNq"
     }
   ],
   "users": [
@@ -175,14 +194,28 @@
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
     }
   ],
-  "profile": {
-    "first": "Kostya",
-    "lastname": "Nitro5",
-    "age": 32,
-    "currency": "USD",
-    "country": "Bellarus",
-    "city": "Minsk",
-    "username": "kostyaNitro5",
-    "avatar": "https://cs13.pikabu.ru/post_img/big/2023/02/13/8/1676296366191520185.png"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Kostya",
+      "lastname": "Nitro5",
+      "age": 32,
+      "currency": "USD",
+      "country": "Bellarus",
+      "city": "Minsk",
+      "username": "kostyaNitro5",
+      "avatar": "https://cs13.pikabu.ru/post_img/big/2023/02/13/8/1676296366191520185.png"
+    },
+    {
+      "id": "2",
+      "first": "Alex",
+      "lastname": "Shepard",
+      "age": 32,
+      "currency": "USD",
+      "country": "USA",
+      "city": "NewYork",
+      "username": "Alex333",
+      "avatar": "https://shapka-youtube.ru/wp-content/uploads/2021/02/prikolnaya-avatarka-dlya-patsanov.jpg"
+    }
+  ]
 }

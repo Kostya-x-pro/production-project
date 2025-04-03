@@ -15,8 +15,20 @@ interface CommentListProps {
     isLoading?: boolean;
 }
 
-export const CommentList = memo(({ className, comments, isLoading }: CommentListProps) => {
+export const CommentList = memo((props: CommentListProps) => {
+    const { className, comments, isLoading } = props;
     const { t } = useTranslation('comment');
+
+    if (isLoading) {
+        return (
+            <div className={classNames(cls.CommentList, {}, [className])}>
+                <CommentCard isLoading />
+                <CommentCard isLoading />
+                <CommentCard isLoading />
+            </div>
+        );
+    }
+
     return (
         <div className={classNames(cls.CommentList, {}, [className])}>
             {comments?.length
