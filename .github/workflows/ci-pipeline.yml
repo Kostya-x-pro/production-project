@@ -43,6 +43,6 @@ jobs:
         if: always()
       
       # TO DO разобраться почему падают скриншотные тесты
-      # - name: screenshot testing
-      #   run: npm run test:ui:ci 
-      #   if: always()
+      - name: screenshot testing
+        run: npm run test:ui:ci 
+        if: always()
