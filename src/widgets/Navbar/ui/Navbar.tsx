@@ -7,7 +7,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserAuthData, userActions } from 'entities/User';
-import * as cls from './Navbar.module.scss';
+import cls from './Navbar.module.scss';
 
 interface NavbarProps {
   className?: string;

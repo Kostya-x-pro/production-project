@@ -5,7 +5,7 @@ import { profileReducer } from 'entities/Profile';
 import { ReducerList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { articleDetailsReducer } from 'entities/Article/model/slice/articleDetailsSlice';
 import { DeepPartial } from '@reduxjs/toolkit';
-import { addCommentFormReducer } from 'features/addCommentForm/model/slices/addCommentFormSlice';
+import { addCommentFormReducer } from 'features/AddCommentForm/model/slices/addCommentFormSlice';
 import { ArticleDetailsCommentsReducer } from 'pages/ArticeDetailsPage/model/slices/articleDetailsCommentsSlice';
 
 const defaultAsyncReducers: ReducerList = {

@@ -9,7 +9,7 @@ import { useSelector } from 'react-redux';
 import { getSidebarItems } from 'widgets/Sidebar/model/selector/getSidebarItems';
 import { Sidebaritem } from '../Sidebaritem/Sidebaritem';
 
-import * as cls from './Sidebar.module.scss';
+import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
   className?: string;

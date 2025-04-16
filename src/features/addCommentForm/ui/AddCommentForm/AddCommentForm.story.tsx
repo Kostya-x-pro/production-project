@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { action } from '@storybook/addon-actions';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-import { AddCommentForm } from 'features/addCommentForm';
+import { AddCommentForm } from 'features/AddCommentForm';
 
 export default {
     title: 'features/AddCommentForm',

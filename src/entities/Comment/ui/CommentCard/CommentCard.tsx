@@ -8,7 +8,7 @@ import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 
 import { Comment } from '../../model/types/comment';
-import * as cls from './CommentCard.module.scss';
+import cls from './CommentCard.module.scss';
 
 interface CommentCardProps {
     className?: string;

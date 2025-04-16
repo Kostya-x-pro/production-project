@@ -3,7 +3,7 @@ import {
 } from 'react';
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
 
-import * as cls from './Input.module.scss';
+import cls from './Input.module.scss';
 
 type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange' | 'readOnly'>
 

@@ -5,7 +5,7 @@ import CopyIcon from 'shared/assets/icons/copy.svg';
 import { Button, ButtonTheme } from '../Button/Button/Button';
 import { Icon } from '../Icon/Icon';
 
-import * as cls from './Code.module.scss';
+import cls from './Code.module.scss';
 
 interface CodeProps {
     className?: string;

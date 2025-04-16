@@ -4,7 +4,7 @@ import { Text } from 'shared/ui/Text/Text';
 
 import { ArticleTextBlock } from '../../model/types/article';
 
-import * as cls from './ArticleTextBlockComponent.module.scss';
+import cls from './ArticleTextBlockComponent.module.scss';
 
 interface ArticleTextBlockComponentProps {
     className?: string;

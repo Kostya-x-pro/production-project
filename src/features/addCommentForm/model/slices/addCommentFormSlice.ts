@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { addCommentFormSchema } from '../types/addCommentForm';
+import { addCommentFormSchema } from 'features/AddCommentForm';
 
 const initialState: addCommentFormSchema = {
     text: '',

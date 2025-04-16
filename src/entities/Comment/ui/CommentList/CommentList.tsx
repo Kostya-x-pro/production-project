@@ -7,7 +7,7 @@ import { Text } from 'shared/ui/Text/Text';
 import { CommentCard } from '../CommentCard/CommentCard';
 import { Comment } from '../../model/types/comment';
 
-import * as cls from './CommentList.module.scss';
+import cls from './CommentList.module.scss';
 
 interface CommentListProps {
     className?: string;

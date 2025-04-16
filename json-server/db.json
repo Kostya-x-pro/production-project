@@ -19,6 +19,7 @@
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUm8GHLl9_MvPWH8Eg3JWDU24rpWptxfpm_w&s",
       "views": 1022,
       "createdAt": "25.01.2025",
+      "userId": "1",
       "type": [
         "IT"
       ],
@@ -41,6 +42,7 @@
       "img": "https://static-00.iconduck.com/assets.00/typescript-plain-icon-256x256-ypojgpyj.png",
       "views": 875,
       "createdAt": "20.02.2025",
+      "userId": "2",
       "type": [
         "IT"
       ],
@@ -64,6 +66,7 @@
       "img": "https://e7.pngegg.com/pngimages/789/586/png-clipart-gray-and-green-v-vue-js-logo-icons-logos-emojis-tech-companies-thumbnail.png",
       "views": 642,
       "createdAt": "10.03.2025",
+      "userId": "3",
       "type": [
         "Frontend",
         "JavaScript"
@@ -93,6 +96,7 @@
       "img": "https://e7.pngegg.com/pngimages/621/411/png-clipart-computer-icons-python-anaconda-anaconda-angle-other-thumbnail.png",
       "views": 910,
       "createdAt": "05.04.2025",
+      "userId": "4",
       "type": [
         "Backend",
         "Python"
@@ -122,6 +126,7 @@
       "img": "https://workspace.ru/upload/iblock/3ef/py2ql4xlsx0lzialp58p1mr27rjlqpcd/0.jpg",
       "views": 1500,
       "createdAt": "15.05.2025",
+      "userId": "5",
       "type": [
         "Web Development",
         "IT"

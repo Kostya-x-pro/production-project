@@ -1,12 +1,18 @@
-import { memo } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
+import React from 'react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Article, ArticleList, ArticleView } from 'entities/Article';
-import cls from './ArticePage.module.scss';
+import { ArticleListitem } from './ArticleListitem';
+import { Article, ArticleView } from '../../model/types/article';
 
-interface ArticePageProps {
-    className?: string;
-}
+export default {
+    title: 'entities/Article/ArticleListitem',
+    component: ArticleListitem,
+    argTypes: {
+        backgroundColor: { control: 'color' },
+    },
+} as ComponentMeta<typeof ArticleListitem>;
+
+const Template: ComponentStory<typeof ArticleListitem> = (args) => <ArticleListitem {...args} />;
 
 const article = {
     id: '1',
@@ -66,17 +72,14 @@ const article = {
     ],
 } as Article;
 
-const ArticePage = ({ className }: ArticePageProps) => (
-    <div className={classNames(cls.ArticePage, {}, [className])}>
-        <ArticleList
-            // isLoading
-            view={ArticleView.SMALL}
-            articles={new Array(16).fill(0).map((item, index) => ({
-                ...article,
-                key: index,
-            }))}
-        />
-    </div>
-);
+export const Big = Template.bind({});
+Big.args = {
+    view: ArticleView.BIG,
+    article,
+};
 
-export default memo(ArticePage);
+export const Small = Template.bind({});
+Small.args = {
+    view: ArticleView.SMALL,
+    article,
+};

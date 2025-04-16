@@ -15,6 +15,10 @@ describe('fetchArticleById', () => {
         img: 'https://workspace.ru/upload/iblock/3ef/py2ql4xlsx0lzialp58p1mr27rjlqpcd/0.jpg',
         views: 1500,
         createdAt: '15.05.2025',
+        user: {
+            id: '1',
+            username: 'admin',
+        },
         type: [],
         blocks: [],
     };

@@ -1,0 +1,17 @@
+.ArticleList {
+    box-sizing: border-box;
+}
+
+.BIG {
+    .card {
+        margin-bottom: 30px;
+    }
+}
+
+.SMALL {
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}

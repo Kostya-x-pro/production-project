@@ -1,12 +1,18 @@
-import { memo } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
+import React from 'react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Article, ArticleList, ArticleView } from 'entities/Article';
-import cls from './ArticePage.module.scss';
+import { Article, ArticleView } from '../../model/types/article';
+import { ArticleList } from './ArticleList';
 
-interface ArticePageProps {
-    className?: string;
-}
+export default {
+    title: 'entities/Article/ArticleList',
+    component: ArticleList,
+    argTypes: {
+        backgroundColor: { control: 'color' },
+    },
+} as ComponentMeta<typeof ArticleList>;
+
+const Template: ComponentStory<typeof ArticleList> = (args) => <ArticleList {...args} />;
 
 const article = {
     id: '1',
@@ -66,17 +72,40 @@ const article = {
     ],
 } as Article;
 
-const ArticePage = ({ className }: ArticePageProps) => (
-    <div className={classNames(cls.ArticePage, {}, [className])}>
-        <ArticleList
-            // isLoading
-            view={ArticleView.SMALL}
-            articles={new Array(16).fill(0).map((item, index) => ({
-                ...article,
-                key: index,
-            }))}
-        />
-    </div>
-);
+export const LoadingBig = Template.bind({});
+LoadingBig.args = {
+    articles: [],
+    isLoading: true,
+    view: ArticleView.BIG,
+};
 
-export default memo(ArticePage);
+export const LoadingSmall = Template.bind({});
+LoadingSmall.args = {
+    articles: [],
+    isLoading: true,
+    view: ArticleView.SMALL,
+};
+
+export const ListSmall = Template.bind({});
+ListSmall.args = {
+    articles: new Array(9)
+        .fill(0)
+        .map((item, index) => ({
+            ...article,
+            id: String(index),
+        })),
+    isLoading: false,
+    view: ArticleView.SMALL,
+};
+
+export const ListBig = Template.bind({});
+ListBig.args = {
+    articles: new Array(9)
+        .fill(0)
+        .map((item, index) => ({
+            ...article,
+            id: String(index),
+        })),
+    isLoading: false,
+    view: ArticleView.BIG,
+};
