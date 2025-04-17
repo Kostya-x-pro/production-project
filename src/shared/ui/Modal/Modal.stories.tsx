@@ -27,3 +27,19 @@ Dark.args = {
     children: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea illum voluptatem esse eligendi repudiandae excepturi veritatis earum tempora ut et',
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const Orange = Template.bind({});
+Orange.args = {
+    isOpen: true,
+    // eslint-disable-next-line
+    children: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea illum voluptatem esse eligendi repudiandae excepturi veritatis earum tempora ut et',
+};
+Orange.decorators = [ThemeDecorator(Theme.ORANGE)];
+
+export const Violet = Template.bind({});
+Violet.args = {
+    isOpen: true,
+    // eslint-disable-next-line
+    children: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea illum voluptatem esse eligendi repudiandae excepturi veritatis earum tempora ut et',
+};
+Violet.decorators = [ThemeDecorator(Theme.VIOLET)];

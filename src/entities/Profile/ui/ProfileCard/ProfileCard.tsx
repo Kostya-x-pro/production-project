@@ -1,13 +1,15 @@
 /* eslint-disable jsx-a11y/alt-text */
 import { useTranslation } from 'react-i18next';
 
-import { Currency, CurrencySelect } from 'entities/Currency';
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import { Input } from 'shared/ui/Input/Input';
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
 import { Loader } from 'shared/ui/Loader/Loader';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
-import { Country, CountrySelect } from 'entities/Country';
+import { CountrySelect } from '../../../Country/ui/CountrySelect/CountrySelect';
+import { CurrencySelect } from '../../../Currency/ui/CurrencySelect/CurrencySelect';
+import { Currency } from '../../../Currency/model/types/currency';
+import { Country } from '../../../Country/model/types/country';
 
 import { Profile } from '../../model/types/profile';
 import cls from './ProfileCard.module.scss';

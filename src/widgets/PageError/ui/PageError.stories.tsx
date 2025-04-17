@@ -20,3 +20,13 @@ export const Dark = Template.bind({});
 Dark.args = {};
 
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const Orange = Template.bind({});
+Orange.args = {};
+
+Orange.decorators = [ThemeDecorator(Theme.ORANGE)];
+
+export const Violet = Template.bind({});
+Violet.args = {};
+
+Violet.decorators = [ThemeDecorator(Theme.VIOLET)];

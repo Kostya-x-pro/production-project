@@ -1,8 +1,7 @@
 import webpack, { DefinePlugin, RuleSetRule } from 'webpack';
 import path from 'path';
-import { BuildPaths } from '../build/types/config';
 import { buildCssLoaders } from '../build/loaders/buildCssLoaders';
-import { buildSvgLoader } from '../build/loaders/buildSvgLoader';
+import { BuildPaths } from '../build/types/config';
 
 export default ({ config }: {config: webpack.Configuration}) => {
     const paths: BuildPaths = {
@@ -11,34 +10,30 @@ export default ({ config }: {config: webpack.Configuration}) => {
         entry: '',
         src: path.resolve(__dirname, '..', '..', 'src'),
     };
+    config!.resolve!.modules!.push(paths.src);
+    config!.resolve!.extensions!.push('.ts', '.tsx');
 
-    const newConfig = { ...config };
+    // eslint-disable-next-line no-param-reassign
+    // @ts-ignore
+    config!.module!.rules = config.module!.rules!.map((rule: RuleSetRule) => {
+        if (/svg/.test(rule.test as string)) {
+            return { ...rule, exclude: /\.svg$/i };
+        }
 
-    newConfig.resolve = newConfig.resolve || {};
-    newConfig.resolve.modules = newConfig.resolve.modules || [];
-    newConfig.resolve.extensions = newConfig.resolve.extensions || [];
+        return rule;
+    });
 
-    newConfig.resolve.modules.push(paths.src);
-    newConfig.resolve.extensions.push('.ts', '.tsx');
-    newConfig.module = newConfig.module || { rules: [] };
-    newConfig.module.rules = newConfig.module.rules || [];
-    newConfig.module.rules.push(buildCssLoaders(true));
+    config!.module!.rules.push({
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+    });
+    config!.module!.rules.push(buildCssLoaders(true));
 
-    newConfig.module.rules = newConfig.module.rules
-        .filter((rule): rule is RuleSetRule => typeof rule === 'object' && rule !== null)
-        .map((rule) => {
-            if (/svg/.test(rule.test as string)) {
-                return { ...rule, exclude: /\.svg$/i };
-            }
-            return rule;
-        });
-
-    newConfig.module.rules.push(buildSvgLoader());
-
-    config.plugins?.push(new DefinePlugin({
-        __IS_DEV__: true,
+    config!.plugins!.push(new DefinePlugin({
+        __IS_DEV__: JSON.stringify(true),
+        __API__: JSON.stringify(''),
         __PROJECT__: JSON.stringify('storybook'),
     }));
 
-    return newConfig;
+    return config;
 };
