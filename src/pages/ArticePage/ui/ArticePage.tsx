@@ -9,15 +9,9 @@ import { useSelector } from 'react-redux';
 import { Page } from 'shared/ui/Page/Page';
 import cls from './ArticePage.module.scss';
 import { articlePageReducer, articlesPageActions, getArticles } from '../model/slices/articlePageSlice';
-import { fetchArticlesList } from '../model/services/fetchArticlesList/fetchArticlesList';
-import {
-    getArticlesPageHasMore,
-    getArticlesPageIsError,
-    getArticlesPageIsLoading,
-    getArticlesPageIsView,
-    getArticlesPageNum,
-} from '../model/selectors/articlesPageSelectors';
+import { getArticlesPageIsLoading, getArticlesPageIsView } from '../model/selectors/articlesPageSelectors';
 import { fetchNextArticlePage } from '../model/services/fetchNextArticlePage/fetchNextArticlePage';
+import { initArticlesPage } from '../model/services/initArticlesPage/initArticlesPage';
 
 interface ArticePageProps {
     className?: string;
@@ -42,15 +36,15 @@ const ArticePage = ({ className }: ArticePageProps) => {
     }, [dispatch]);
 
     useInitialEffect(() => {
-        dispatch(articlesPageActions.initState());
-        dispatch(fetchArticlesList({
-            page: 1,
-        }));
+        dispatch(initArticlesPage());
     });
 
     return (
         (
-            <DynamicModuleLoader reducers={reducers}>
+            <DynamicModuleLoader
+                reducers={reducers}
+                removeAfterUnmount={false}
+            >
                 <Page
                     onScrollEnd={onLoadNextPart}
                     className={classNames(cls.ArticePage, {}, [className])}

@@ -16,6 +16,7 @@ describe('fetchNextArticlePage.test.ts', () => {
                 isLoading: false,
                 hasMore: true,
                 view: ArticleView.BIG,
+                _inited: false,
             },
         });
 
@@ -35,6 +36,7 @@ describe('fetchNextArticlePage.test.ts', () => {
                 isLoading: false,
                 hasMore: false,
                 view: ArticleView.BIG,
+                _inited: false,
             },
         });
 
