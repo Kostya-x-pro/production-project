@@ -8,6 +8,7 @@ import { ProfileSchema } from 'entities/Profile';
 import { UserSchema } from 'entities/User';
 import { addCommentFormSchema } from 'features/AddCommentForm';
 import { LoginSchema } from 'features/AuthByUsername';
+import { ScrollPosRestoreShema } from 'features/ScrollPosRestore';
 import { ArticleDetailsCommentSchema } from 'pages/ArticeDetailsPage';
 import { ArticlesPageSchema } from 'pages/ArticePage';
 import { NavigateOptions, To } from 'react-router-dom';
@@ -15,6 +16,7 @@ import { NavigateOptions, To } from 'react-router-dom';
 export interface StateSchema {
   counter: CounterSchema;
   user: UserSchema;
+  ScrollPosRestore: ScrollPosRestoreShema;
 
   // Асинхронные редюссеры
   loginForm?: LoginSchema;
