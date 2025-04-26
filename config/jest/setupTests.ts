@@ -1,3 +1,3 @@
-// Такой файл настройки есть при create-react-app
+// Такой файл вы могли наблюдать при create-react-app
 import '@testing-library/jest-dom';
 import 'regenerator-runtime/runtime';
