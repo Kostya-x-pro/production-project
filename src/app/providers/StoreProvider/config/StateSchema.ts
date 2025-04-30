@@ -9,9 +9,12 @@ import { UserSchema } from 'entities/User';
 import { addCommentFormSchema } from 'features/AddCommentForm';
 import { LoginSchema } from 'features/AuthByUsername';
 import { ScrollPosRestoreShema } from 'features/ScrollPosRestore';
-import { ArticleDetailsCommentSchema } from 'pages/ArticeDetailsPage';
+import {
+    ArticleDetailsCommentSchema,
+    ArticleDetailsPageSchema,
+    ArticleDetailsRecomendationsSchema,
+} from 'pages/ArticeDetailsPage';
 import { ArticlesPageSchema } from 'pages/ArticePage';
-import { NavigateOptions, To } from 'react-router-dom';
 
 export interface StateSchema {
   counter: CounterSchema;
@@ -22,9 +25,12 @@ export interface StateSchema {
   loginForm?: LoginSchema;
   profile?: ProfileSchema;
   articleDetails?: articleDetailsSchema;
-  articleDetailsComments?: ArticleDetailsCommentSchema;
+  // articleDetailsPage - совмещает в себе эти две схемы
+  // articleDetailsComments?: ArticleDetailsCommentSchema;
+  // articleDetailsRecomendations?: ArticleDetailsRecomendationsSchema;
   addCommentForm?: addCommentFormSchema;
   articlesPage?: ArticlesPageSchema;
+  articleDetailsPage?: ArticleDetailsPageSchema
 }
 
 export type StateSchemaKey = keyof StateSchema;
