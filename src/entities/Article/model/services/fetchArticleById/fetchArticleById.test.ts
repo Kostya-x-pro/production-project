@@ -39,7 +39,11 @@ describe('fetchArticleById', () => {
         const action = fetchArticleById(articleId);
         const result = await action(dispatch, getState, extra);
 
-        expect(mockedAxios.get).toHaveBeenCalledWith(`/articles/${articleId}`);
+        expect(mockedAxios.get).toHaveBeenCalledWith(`/articles/${articleId}`, {
+            params: {
+                _expand: 'user',
+            },
+        });
         expect(result.payload).toEqual(article);
         expect(result.type.endsWith('fulfilled')).toBe(true);
     });

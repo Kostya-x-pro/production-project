@@ -14,5 +14,9 @@
     "убыванию": "descending",
     "возрастанию": "ascending",
     "Статьи не найдены": "Статьи не найдены",
-    "Рекомендуем": "Recommended"
+    "Рекомендуем": "Recommended",
+    "Редактировать статьи с ID = ": "Edit articles with ID = ",
+    "Создание новой статьи": "Creating a new article",
+    "Назад к списку": "Back to list",
+    "Редактировать": "Edit"
 }

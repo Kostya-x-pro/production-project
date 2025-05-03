@@ -11,4 +11,12 @@ module.exports = {
     core: {
         builder: 'webpack5',
     },
+    // Временно добавил отключение чувствительности регистра путей для windows (если будут проблемы с деплоем то разобраться)
+    webpackFinal: async (config) => {
+        // Находим и удаляем case-sensitive-paths-webpack-plugin
+        config.plugins = config.plugins.filter(
+            (plugin) => plugin.constructor.name !== 'CaseSensitivePathsPlugin',
+        );
+        return config;
+    },
 };

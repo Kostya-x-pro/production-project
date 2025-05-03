@@ -5,7 +5,7 @@ import { Country } from '../../../Country/model/types/country';
 import { ProfileCard } from './ProfileCard';
 
 export default {
-    title: 'entties/ProfileCard',
+    title: 'entities/ProfileCard',
     component: ProfileCard,
     argTypes: {
         backgroundColor: { control: 'color' },

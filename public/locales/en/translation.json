@@ -16,5 +16,7 @@
   "Введите пароль": "Enter password",
   "Главная": "Home",
   "Профиль": "Profile",
-  "Статьи": "Articles"
+  "Статьи": "Articles",
+  "Создать статью": "Create an article",
+  "Произошла ошибка при загрузке статьи": "There was an error loading the article"
 }
