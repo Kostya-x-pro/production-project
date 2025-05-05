@@ -33,6 +33,10 @@ jobs:
       - name: linting scss
         run: npm run lint:scss
         if: always()
+
+      - name: auto-fix styles
+        run: npx stylelint "**/*.scss" --fix
+        if: always()
         
       - name: unit testing
         run: npm run test:unit

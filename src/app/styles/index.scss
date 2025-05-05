@@ -24,11 +24,11 @@
     width: 12px;
     height: 10px;
 }
-  
+
 *::-webkit-scrollbar-track {
     background: var(--card-bg);
 }
-  
+
 *::-webkit-scrollbar-thumb {
     background-color: var(--inverted-primary-color);
     border-radius: 20px;
