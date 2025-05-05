@@ -1,12 +1,16 @@
 import {
-    AnyAction, CombinedState, EnhancedStore, Reducer, ReducersMapObject,
+    AnyAction,
+    CombinedState,
+    EnhancedStore,
+    Reducer,
+    ReducersMapObject,
 } from '@reduxjs/toolkit';
 import { AxiosInstance } from 'axios';
 import { articleDetailsSchema } from 'entities/Article';
 import { CounterSchema } from 'entities/Counter';
 import { ProfileSchema } from 'entities/Profile';
 import { UserSchema } from 'entities/User';
-import { addCommentFormSchema } from 'features/AddCommentForm';
+import { AddCommentFormSchema } from 'features/AddCommentForm';
 import { LoginSchema } from 'features/AuthByUsername';
 import { ScrollPosRestoreShema } from 'features/ScrollPosRestore';
 import {
@@ -28,14 +32,14 @@ export interface StateSchema {
   // articleDetailsPage - совмещает в себе эти две схемы
   // articleDetailsComments?: ArticleDetailsCommentSchema;
   // articleDetailsRecomendations?: ArticleDetailsRecomendationsSchema;
-  addCommentForm?: addCommentFormSchema;
+  addCommentForm?: AddCommentFormSchema;
   articlesPage?: ArticlesPageSchema;
-  articleDetailsPage?: ArticleDetailsPageSchema
+  articleDetailsPage?: ArticleDetailsPageSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;
 // eslint-disable-next-line no-undef
-export type MountedReducers = OptionalRecord<StateSchemaKey, boolean>
+export type MountedReducers = OptionalRecord<StateSchemaKey, boolean>;
 
 export interface ReducerManager {
   getReducerMap: () => ReducersMapObject<StateSchema>;
@@ -43,15 +47,15 @@ export interface ReducerManager {
   add: (key: StateSchemaKey, reducer: Reducer) => void;
   remove: (key: StateSchemaKey) => void;
   // true - вмонтирован false - демонтирован
-  getMountedReducers: () => MountedReducers ;
+  getMountedReducers: () => MountedReducers;
 }
 
 export interface ReduxStoreWithManager extends EnhancedStore<StateSchema> {
-  reducerManager: ReducerManager
+  reducerManager: ReducerManager;
 }
 
 export interface ThunkExtraArg {
-  api: AxiosInstance,
+  api: AxiosInstance;
 }
 
 export interface ThunkConfig<T> {
