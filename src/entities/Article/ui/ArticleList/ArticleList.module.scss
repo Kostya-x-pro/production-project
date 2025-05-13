@@ -13,4 +13,13 @@
     gap: 20px;
     justify-content: space-evenly;
     flex-wrap: wrap;
+
+    .card {
+        height: 300px;
+    }
+
+    .row {
+        display: flex;
+        gap: 30px;
+    }
 }
