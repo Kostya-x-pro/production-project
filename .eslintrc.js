@@ -23,6 +23,8 @@ module.exports = {
         '@typescript-eslint',
         'i18next',
         'react-hooks',
+        'kostya-x-pro-production-project-plugin'
+        
     ],
     rules: {
         'react/jsx-indent': [2, 4],
@@ -50,6 +52,7 @@ module.exports = {
         'react-hooks/exhaustive-deps': 'error',
         'no-param-reassign': 'off',
         'arrow-body-style': 'off',
+        'kostya-x-pro-production-project-plugin/path-checker': 'error',
     },
     globals: {
         __IS_DEV__: true,

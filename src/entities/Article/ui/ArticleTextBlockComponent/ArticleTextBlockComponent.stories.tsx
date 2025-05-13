@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { ArticleBlockType, ArticleTextBlock } from 'entities/Article/model/types/article';
+import { ArticleBlockType, ArticleTextBlock } from '../../model/types/article';
 import { ArticleTextBlockComponent } from './ArticleTextBlockComponent';
 
 const mockTextBlock: ArticleTextBlock = {

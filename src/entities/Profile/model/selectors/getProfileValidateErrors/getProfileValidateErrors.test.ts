@@ -1,9 +1,7 @@
 import { DeepPartial } from '@reduxjs/toolkit';
 import { StateSchema } from 'app/providers/StoreProvider';
 
-import { validateProfileDataError } from 'entities/Profile';
-import { Country } from 'entities/Country';
-import { Currency } from 'entities/Currency';
+import { validateProfileDataError } from '../../types/profile';
 import { getProfileValidateErrors } from './getProfileValidateErrors';
 
 describe('getProfileValidateErrors.test.ts', () => {

@@ -7,21 +7,21 @@ import {
     ArticleTypeTabs,
 } from 'entities/Article';
 import { useSelector } from 'react-redux';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { Card } from 'shared/ui/Card/Card';
+import { Input } from 'shared/ui/Input/Input';
+import { SortOrder } from 'shared/types';
+import { useDebounce } from 'shared/lib/hooks/useDebounce/useDebounce';
+import { ArticleType } from 'entities/Article/model/types/article';
 import {
     getArticlesPageIsView,
     getArticlesPageOrder,
     getArticlesPageSearch,
     getArticlesPageSort,
     getArticlesPageType,
-} from 'pages/ArticePage/model/selectors/articlesPageSelectors';
-import { articlesPageActions } from 'pages/ArticePage/model/slices/articlePageSlice';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { Card } from 'shared/ui/Card/Card';
-import { Input } from 'shared/ui/Input/Input';
-import { SortOrder } from 'shared/types';
-import { fetchArticlesList } from 'pages/ArticePage/model/services/fetchArticlesList/fetchArticlesList';
-import { useDebounce } from 'shared/lib/hooks/useDebounce/useDebounce';
-import { ArticleType } from 'entities/Article/model/types/article';
+} from '../../model/selectors/articlesPageSelectors';
+import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
+import { articlesPageActions } from '../../model/slices/articlePageSlice';
 import cls from './ArticlesPageFilters.module.scss';
 
 interface ArticlesPageFiltersProps {
