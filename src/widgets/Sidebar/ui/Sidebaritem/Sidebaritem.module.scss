@@ -1,5 +1,4 @@
 .item {
-    margin-top: 10px;
     display: flex;
     align-items: center;
 }
@@ -10,7 +9,7 @@
 }
 
 .icon {
-    margin-right: 10px; // временно добавленно
+    margin-right: 10px;
     fill: var(--inverted-primary-color);
 }
 
