@@ -1,9 +1,9 @@
 import { DeepPartial } from '@reduxjs/toolkit';
 import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
-import { ProfileSchema, validateProfileDataError } from '../types/profile';
 import { profileActions, profileReducer } from './profileSlice';
 import { updateProfileData } from '../services/updateProfileData/updateProfileData';
+import { ProfileSchema, validateProfileDataError } from '../types/EditableProfileCardSchema';
 
 const data = {
     first: 'Kostya',

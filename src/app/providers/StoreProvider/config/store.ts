@@ -2,6 +2,7 @@ import { configureStore, ReducersMapObject } from '@reduxjs/toolkit';
 import { $api } from 'shared/api/api';
 import { CombinedState, Reducer } from 'redux';
 import { ScrollPosRestoreReducer } from 'features/ScrollPosRestore';
+import { rtkApi } from 'shared/api/rtkApi';
 import { userReducer } from '../../../../entities/User/model/slice/userSlice';
 import { counterReducer } from '../../../../entities/Counter/model/slice/counterSlice'; // ToDo Выпилить его позже
 import { StateSchema, ThunkExtraArg } from './StateSchema';
@@ -16,6 +17,8 @@ export function createReduxStore(
         counter: counterReducer,
         user: userReducer,
         ScrollPosRestore: ScrollPosRestoreReducer,
+        // RTK Query reducers
+        [rtkApi.reducerPath]: rtkApi.reducer,
     };
 
     const reducerManager = createReducerManager(rootReducers);
@@ -32,7 +35,7 @@ export function createReduxStore(
             thunk: {
                 extraArgument: extraArg,
             },
-        }),
+        }).concat(rtkApi.middleware),
     });
 
     // @ts-ignore

@@ -4,7 +4,7 @@ import { Currency } from 'entities/Currency';
 
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
 import { updateProfileData } from './updateProfileData';
-import { validateProfileDataError } from '../../types/profile';
+import { validateProfileDataError } from '../../types/EditableProfileCardSchema';
 
 jest.mock('axios');
 const mockedAxios = jest.mocked(axios, true);

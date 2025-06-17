@@ -1,7 +1,7 @@
 import { Story } from '@storybook/react';
 import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
 import { loginReducer } from 'features/AuthByUsername/model/slice/loginSlice';
-import { profileReducer } from 'entities/Profile';
+import { profileReducer } from 'features/EditableProfileCard/model/slice/profileSlice';
 import { ReducerList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { DeepPartial } from '@reduxjs/toolkit';
 import { addCommentFormReducer } from 'features/AddCommentForm/model/slices/addCommentFormSlice';
