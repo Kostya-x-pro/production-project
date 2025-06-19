@@ -469,21 +469,28 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "USER",
+      "roles": ["ADMIN"],
       "avatar": "https://png.pngtree.com/png-clipart/20231019/original/pngtree-user-profile-avatar-png-image_13369988.png"
     },
     {
       "id": "2",
       "username": "kostya",
       "password": "qwerty",
-      "role": "ADMIN",
+      "roles": ["ADMIN"],
       "avatar": "https://cs13.pikabu.ru/post_img/big/2023/02/13/8/1676296366191520185.png"
     },
     {
       "id": "3",
       "username": "user",
       "password": "123",
-      "role": "USER",
+      "roles": ["USER"],
+      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+    },
+    {
+      "id": "4",
+      "username": "manager",
+      "password": "123",
+      "roles": ["MANAGER"],
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
     }
   ],

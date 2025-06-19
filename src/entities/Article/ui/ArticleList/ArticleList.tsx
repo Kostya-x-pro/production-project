@@ -85,7 +85,6 @@ export const ArticleList = memo((props: ArticleListProps) => {
 
     return (
         <WindowScroller
-            onScroll={() => console.log('scroll frow virtualized list')}
             scrollElement={document.getElementById(PAGE_ID) as Element}
         >
             {({
