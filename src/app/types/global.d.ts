@@ -1,3 +1,4 @@
+declare module 'storybook-addon-mock';
 declare module '*.scss' {
   interface IClassNames {
       [className: string]: string

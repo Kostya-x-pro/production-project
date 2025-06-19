@@ -21,7 +21,7 @@ interface ArticleListProps {
     virtualized?: boolean
 }
 
-const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.SMALL ? 9 : 3)
+const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.SMALL ? 9 : 5)
     .fill(0)
     .map((item, index) => (
         // eslint-disable-next-line react/no-array-index-key
@@ -41,7 +41,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
 
     const isBig = view === ArticleView.BIG;
 
-    const itemsPerRow = isBig ? 1 : 3;
+    const itemsPerRow = isBig ? 1 : 5;
     const rowCount = isBig ? articles.length : Math.ceil(articles.length / itemsPerRow);
 
     const rowRender = (props: ListRowProps) => {

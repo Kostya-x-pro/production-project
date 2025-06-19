@@ -64,14 +64,17 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                         ...(isAdminPanelAvailable ? [{
                             content: t('Админка'),
                             href: RoutePath.admin_panel,
+                            key: 'admin_panel',
                         }] : []),
                         {
                             content: t('Профиль'),
                             href: RoutePath.profile + authData.id,
+                            key: 'profile',
                         },
                         {
                             content: t('Выйти'),
                             onClick: onLogOut,
+                            key: 'logout',
                         },
                     ]}
                     trigger={<Avatar size={30} src={authData.avatar} />}
