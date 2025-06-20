@@ -1,7 +1,8 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ArticleBlockType } from '../../model/consts/consts';
 import { ArticleCodeBlockComponent } from './ArticleCodeBlockComponent';
-import { ArticleBlockType, ArticleCodeBlock } from '../../model/types/article';
+import { ArticleCodeBlock } from '../../model/types/article';
 
 const mockCodeBlock: ArticleCodeBlock = {
     id: '3',

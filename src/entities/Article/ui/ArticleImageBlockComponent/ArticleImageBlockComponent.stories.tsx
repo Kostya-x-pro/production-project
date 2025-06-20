@@ -1,8 +1,8 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { TextAlign } from 'shared/ui/Text/Text';
+import { ArticleBlockType } from '../../model/consts/consts';
 import { ArticleImageBlockComponent } from './ArticleImageBlockComponent';
-import { ArticleBlockType, ArticleImageBlock } from '../../model/types/article';
+import { ArticleImageBlock } from '../../model/types/article';
 
 const mockImageBlock: ArticleImageBlock = {
     id: '2',

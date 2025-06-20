@@ -4,7 +4,7 @@ import { Currency } from 'entities/Currency';
 
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
 import { updateProfileData } from './updateProfileData';
-import { validateProfileDataError } from '../../types/EditableProfileCardSchema';
+import { validateProfileDataError } from '../../consts/consts';
 
 jest.mock('axios');
 const mockedAxios = jest.mocked(axios, true);
@@ -29,9 +29,7 @@ describe('updateProfileData.test.ts', () => {
                 readonly: false,
             },
         });
-        thunk.api.put.mockReturnValue(
-            Promise.resolve({ data }),
-        );
+        thunk.api.put.mockReturnValue(Promise.resolve({ data }));
         const result = await thunk.callThunk();
 
         expect(thunk.api.put).toHaveBeenCalled();
@@ -47,15 +45,11 @@ describe('updateProfileData.test.ts', () => {
                 readonly: false,
             },
         });
-        thunk.api.put.mockReturnValue(
-            Promise.resolve({ status: 403 }),
-        );
+        thunk.api.put.mockReturnValue(Promise.resolve({ status: 403 }));
         const result = await thunk.callThunk();
 
         expect(result.meta.requestStatus).toBe('rejected');
-        expect(result.payload).toEqual([
-            validateProfileDataError.SERVER_ERROR,
-        ]);
+        expect(result.payload).toEqual([validateProfileDataError.SERVER_ERROR]);
     });
 
     test('validate error', async () => {

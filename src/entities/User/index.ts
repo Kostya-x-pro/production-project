@@ -8,5 +8,5 @@ export { getUserInited } from './model/selectors/getUserInited/getUserInited';
 export { getUserRoles } from './model/selectors/roleSelectors/roleSelectors';
 
 // types
-export { User, UserSchema } from './model/type/user';
-export { UserRoles } from './model/type/user';
+export type{ User, UserSchema } from './model/type/user';
+export { UserRoles } from './model/consts/consts';

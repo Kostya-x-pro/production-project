@@ -3,7 +3,8 @@ import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
 import { profileActions, profileReducer } from './profileSlice';
 import { updateProfileData } from '../services/updateProfileData/updateProfileData';
-import { ProfileSchema, validateProfileDataError } from '../types/EditableProfileCardSchema';
+import { ProfileSchema } from '../types/EditableProfileCardSchema';
+import { validateProfileDataError } from '../consts/consts';
 
 const data = {
     first: 'Kostya',
@@ -18,10 +19,9 @@ const data = {
 describe('profileSlice.test.ts', () => {
     test('test set readonly', () => {
         const state: DeepPartial<ProfileSchema> = { readonly: false };
-        expect(profileReducer(
-        state as ProfileSchema,
-        profileActions.setReadonly(true),
-        )).toEqual({ readonly: true });
+        expect(
+            profileReducer(state as ProfileSchema, profileActions.setReadonly(true)),
+        ).toEqual({ readonly: true });
     });
 
     test('test update profile service pending', () => {
@@ -29,10 +29,9 @@ describe('profileSlice.test.ts', () => {
             isLoading: false,
             validateErrors: [validateProfileDataError.SERVER_ERROR],
         };
-        expect(profileReducer(
-        state as ProfileSchema,
-        updateProfileData.pending,
-        )).toEqual({
+        expect(
+            profileReducer(state as ProfileSchema, updateProfileData.pending),
+        ).toEqual({
             isLoading: true,
             validateErrors: undefined,
         });
@@ -42,10 +41,12 @@ describe('profileSlice.test.ts', () => {
         const state: DeepPartial<ProfileSchema> = {
             isLoading: true,
         };
-        expect(profileReducer(
+        expect(
+            profileReducer(
         state as ProfileSchema,
         updateProfileData.fulfilled(data, ''),
-        )).toEqual({
+            ),
+        ).toEqual({
             isLoading: false,
             validateErrors: undefined,
             readonly: true,
