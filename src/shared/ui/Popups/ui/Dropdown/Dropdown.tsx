@@ -2,8 +2,10 @@ import { Menu } from '@headlessui/react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Fragment, ReactNode } from 'react';
 import { DropdownDirection } from 'shared/types/ui';
+import { AppLink } from '../../../AppLink/AppLink';
+import { mapDirectionClasses } from '../styles/consts';
 import cls from './Dropdown.module.scss';
-import { AppLink } from '../AppLink/AppLink';
+import popupsCls from '../styles/popups.module.scss';
 
 export interface DropdownItem {
     disabled?: boolean;
@@ -20,13 +22,6 @@ interface DropdownProps {
     direction?: DropdownDirection,
 }
 
-const mapDirectionClasses: Record<DropdownDirection, string> = {
-    'bottom left': cls.optionBottomLeft,
-    'bottom right': cls.optionBottomRight,
-    'top left': cls.optionsTopLeft,
-    'top right': cls.optionsTopRight,
-};
-
 export function Dropdown(props: DropdownProps) {
     const {
         className, items, trigger, direction = 'bottom right',
@@ -35,8 +30,8 @@ export function Dropdown(props: DropdownProps) {
     const menuClasses = [mapDirectionClasses[direction]];
 
     return (
-        <Menu as="div" className={classNames(cls.Dropdown, {}, [className])}>
-            <Menu.Button className={cls.btn}>
+        <Menu as="div" className={classNames(popupsCls.popup, {}, [className])}>
+            <Menu.Button className={popupsCls.trigger}>
                 {trigger}
             </Menu.Button>
             <Menu.Items className={classNames(cls.menu, {}, menuClasses)}>
@@ -46,7 +41,7 @@ export function Dropdown(props: DropdownProps) {
                             disabled={item.disabled}
                             type="button"
                             onClick={item.onClick}
-                            className={classNames(cls.item, { [cls.active]: active }, [className])}
+                            className={classNames(cls.item, { [popupsCls.active]: active }, [className])}
                         >
                             {item.content}
                         </button>
@@ -54,14 +49,23 @@ export function Dropdown(props: DropdownProps) {
 
                     if (item.href) {
                         return (
-                            <Menu.Item key={item.key} as={AppLink} to={item.href} disabled={item.disabled}>
+                            <Menu.Item
+                                key={item.key}
+                                as={AppLink}
+                                to={item.href}
+                                disabled={item.disabled}
+                            >
                                 {content}
                             </Menu.Item>
                         );
                     }
 
                     return (
-                        <Menu.Item key={item.key} as={Fragment} disabled={item.disabled}>
+                        <Menu.Item
+                            key={item.key}
+                            as={Fragment}
+                            disabled={item.disabled}
+                        >
                             {content}
                         </Menu.Item>
                     );
