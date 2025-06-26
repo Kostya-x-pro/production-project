@@ -19,8 +19,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+      # TO DO убрать флаг после обновления RTK
       - name: install modules
-        run: npm install
+        run: npm install --legacy-peer-deps
 
       - name: build production project
         run: npm run build:prod
