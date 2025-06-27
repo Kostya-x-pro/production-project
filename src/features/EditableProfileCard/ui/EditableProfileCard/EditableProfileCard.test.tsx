@@ -1,14 +1,14 @@
 import { fireEvent, screen, within } from '@testing-library/react';
-import {
-    componentRender,
-} from 'shared/lib/tests/componentRender/componentRender';
-import { Profile } from 'entities/Profile';
-import { Currency } from 'entities/Currency';
-import { Country } from 'entities/Country';
 import { userEvent } from '@testing-library/user-event';
 import { Reducer } from 'react';
 import { AnyAction } from '@reduxjs/toolkit';
-import { $api } from 'shared/api/api';
+import {
+    componentRender,
+} from '@/shared/lib/tests/componentRender/componentRender';
+import { Profile } from '@/entities/Profile';
+import { Currency } from '@/entities/Currency';
+import { Country } from '@/entities/Country';
+import { $api } from '@/shared/api/api';
 import { ProfileSchema } from '../../model/types/EditableProfileCardSchema';
 import { EditableProfileCard } from './EditableProfileCard';
 import { profileReducer } from '../../model/slice/profileSlice';

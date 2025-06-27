@@ -19,6 +19,7 @@
     transform: scale(0.5);
     max-width: 60%;
     background: var(--bg-color);
+    z-index: var(--overlay-z-index);
 }
 
 .opened {

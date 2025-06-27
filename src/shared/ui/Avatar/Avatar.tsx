@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import { CSSProperties, useMemo } from 'react';
-import { classNames, Mods } from 'shared/lib/classNames/classNames';
+import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 
 import cls from './Avatar.module.scss';
 

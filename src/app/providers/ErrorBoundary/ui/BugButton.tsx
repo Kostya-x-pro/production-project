@@ -1,7 +1,6 @@
-import { Button } from 'shared/ui/Button/Button/Button';
-
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Button } from '@/shared/ui/Button/Button/Button';
 
 // Компонент для тестирования ошибки и ErrorBundary
 export const BugButton = () => {
