@@ -18,5 +18,8 @@
   "Профиль": "Profile",
   "Статьи": "Articles",
   "Создать статью": "Create an article",
-  "Произошла ошибка при загрузке статьи": "There was an error loading the article"
+  "Произошла ошибка при загрузке статьи": "There was an error loading the article",
+  "ваш отзыв": "your review",
+    "Закрыть": "Close",
+  "Отправить": "Send"
 }
