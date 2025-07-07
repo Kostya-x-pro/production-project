@@ -558,6 +558,90 @@
       "city": "NewYork",
       "username": "Alex333",
       "avatar": "https://shapka-youtube.ru/wp-content/uploads/2021/02/prikolnaya-avatarka-dlya-patsanov.jpg"
+    },
+    {
+      "id": "3",
+      "first": "Shon",
+      "lastname": "Dales",
+      "age": 24,
+      "currency": "USD",
+      "country": "USA",
+      "city": "Austria",
+      "username": "Koi",
+      "avatar": "https://shapka-youtube.ru/wp-content/uploads/2021/02/prikolnaya-avatarka-dlya-patsanov.jpg"
+    }
+  ],
+  "article-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "2"
+    },
+    {
+      "userId": "1",
+      "articleId": "9",
+      "rate": 5,
+      "feedback": "Очень заебатый язык наверное",
+      "id": "7wfNvA3"
+    },
+    {
+      "userId": "1",
+      "articleId": "3",
+      "rate": "1",
+      "feedback": "Ну так себе",
+      "id": "0SPBi4l"
+    },
+    {
+      "userId": "1",
+      "articleId": "10",
+      "rate": "3",
+      "feedback": "Хрень",
+      "id": "1GMGOzM"
+    },
+    {
+      "userId": "1",
+      "articleId": "4",
+      "rate": "3",
+      "id": "qnYDZYA"
+    }
+  ],
+  "profile-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Какой то отзыв",
+      "userId": "1",
+      "profileId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "Ещё какой то отзыв",
+      "userId": "1",
+      "profileId": "2"
+    },
+    {
+      "userId": "2",
+      "profileId": "2",
+      "rate": "5",
+      "feedback": "Шикарный профиль хочу себе такой",
+      "id": "CyCYAj7"
+    },
+    {
+      "userId": "1",
+      "profileId": "3",
+      "rate": "3",
+      "feedback": "Зашибись!",
+      "id": "3sc0f76"
     }
   ]
 }

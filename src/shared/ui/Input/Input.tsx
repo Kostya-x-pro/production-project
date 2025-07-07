@@ -76,7 +76,7 @@ export const Input = memo((props: InputProps) => {
                 {isCaretVsible && (
                     <span
                         className={cls.caret}
-                        style={{ left: `${caretPosition * 8.7}px` }}
+                        style={{ left: `${caretPosition * 6.7}px` }}
                     />
                 )}
             </div>
