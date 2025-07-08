@@ -27,7 +27,7 @@ WithFeedback.args = {
     feedbackTitle: 'Оставьте отзыв',
     hasFeedback: true,
     onAccept: action('onAccept'),
-    onCacel: action('onCacel'),
+    onCancel: action('onCancel'),
 };
 
 export const Mobile = Template.bind({});
@@ -36,5 +36,5 @@ Mobile.args = {
     feedbackTitle: 'Оставьте отзыв',
     hasFeedback: true,
     onAccept: action('onAccept'),
-    onCacel: action('onCacel'),
+    onCancel: action('onCancel'),
 };
