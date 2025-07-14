@@ -53,6 +53,13 @@ module.exports = {
         'no-param-reassign': 'off',
         'arrow-body-style': 'off',
         'kostya-x-pro-production-project-plugin/path-checker': ['error', { alias: '@' }],
+        'kostya-x-pro-production-project-plugin/public-api-imports': [
+            'error', 
+            { 
+                alias: '@',
+                testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
+            }
+        ],
     },
     globals: {
         __IS_DEV__: true,

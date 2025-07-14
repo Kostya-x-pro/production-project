@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
 
 import { Text, TextSize } from '@/shared/ui/Text/Text';
-import { PAGE_ID } from '@/widgets/Page/Page';
+import { PAGE_ID } from '@/widgets/Page';
 import { ArticleView } from '../../model/consts/consts';
 import { Article } from '../../model/types/article';
 import cls from './ArticleList.module.scss';

@@ -8,3 +8,4 @@ export { ArticleView, ArticleSortField } from './model/consts/consts';
 
 export type { Article } from './model/types/article';
 export type { articleDetailsSchema } from './model/types/articleDetailsSchema';
+export { ArticleType, ArticleBlockType } from './model/consts/consts';
