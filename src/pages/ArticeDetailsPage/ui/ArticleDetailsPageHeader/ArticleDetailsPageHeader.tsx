@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
 
 import { Button, ButtonTheme } from '@/shared/ui/Button/Button/Button';
-import { RoutePath } from '@/app/providers/router/ui/config/routeConfig';
+import { RoutePath } from '@/shared/const/router';
 import { getUserAuthData } from '@/entities/User';
 import { getArticleDetaisData } from '@/entities/Article';
 import { HStack } from '@/shared/ui/Stack';

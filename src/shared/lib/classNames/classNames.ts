@@ -15,5 +15,13 @@ export function classNames(
         ...Object.entries(mods)
             .filter(([_, value]) => Boolean(value))
             .map(([className]) => className),
-    ].join(' ').trim();
+    ]
+        .join(' ')
+        .trim();
+}
+export enum Theme {
+  LIGHT = 'app_light_theme',
+  DARK = 'app_dark_theme',
+  ORANGE = 'app_orange_theme',
+  VIOLET = 'app_violet_theme',
 }

@@ -9,7 +9,7 @@ import { Card } from '@/shared/ui/Card/Card';
 import EyeIcon from '@/shared/assets/icons/eye.svg';
 import { Avatar } from '@/shared/ui/Avatar/Avatar';
 import { Button, ButtonTheme } from '@/shared/ui/Button/Button/Button';
-import { RoutePath } from '@/app/providers/router/ui/config/routeConfig';
+import { RoutePath } from '@/shared/const/router';
 import { AppLink } from '@/shared/ui/AppLink/AppLink';
 import { ArticleView, ArticleBlockType } from '../../model/consts/consts';
 import cls from './ArticleListitem.module.scss';
