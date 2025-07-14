@@ -3,7 +3,8 @@ import {
     memo, Suspense, useCallback, useMemo,
 } from 'react';
 import { PageLoader } from '@/widgets/PageLoader';
-import { AppRouteProps, routeConfig } from '@/shared/config/routeConfig/routeConfig';
+import { routeConfig } from './config/routeConfig';
+import { AppRouteProps } from '@/shared/types/router';
 
 import { RequireAuth } from './RequiredAuth';
 
