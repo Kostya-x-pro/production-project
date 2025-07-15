@@ -1,4 +1,3 @@
-import { error } from 'console';
 import { articleDetailsReducer } from './articleDetailsSlice';
 import { fetchArticleById } from '../services/fetchArticleById/fetchArticleById';
 import { articleDetailsSchema } from '../types/articleDetailsSchema';

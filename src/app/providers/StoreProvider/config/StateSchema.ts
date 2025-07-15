@@ -14,9 +14,7 @@ import { AddCommentFormSchema } from '@/features/AddCommentForm';
 import { LoginSchema } from '@/features/AuthByUsername';
 import { ScrollPosRestoreShema } from '@/features/ScrollPosRestore';
 import {
-    ArticleDetailsCommentSchema,
     ArticleDetailsPageSchema,
-    ArticleDetailsRecomendationsSchema,
 } from '@/pages/ArticeDetailsPage';
 import { ArticlesPageSchema } from '@/pages/ArticePage';
 import { rtkApi } from '@/shared/api/rtkApi';

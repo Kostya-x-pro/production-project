@@ -23,12 +23,14 @@ module.exports = {
         '@typescript-eslint',
         'i18next',
         'react-hooks',
-        'kostya-x-pro-production-project-plugin'
+        'kostya-x-pro-production-project-plugin',
+        'unused-imports',
 
     ],
     rules: {
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
+        'unused-imports/no-unused-imports': 'error',
         indent: [2, 4],
         'react/jsx-filename-extension':
             [2,

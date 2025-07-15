@@ -1,5 +1,5 @@
 import {
-    DetailedHTMLProps, HTMLAttributes, memo, ReactNode,
+    DetailedHTMLProps, HTMLAttributes, ReactNode,
 } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
