@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
 
-import { Button, ButtonTheme } from '@/shared/ui/Button/Button/Button';
+import { Button, ButtonTheme } from '@/shared/ui/Button';
 import { RoutePath } from '@/shared/const/router';
 import { getUserAuthData } from '@/entities/User';
 import { getArticleDetaisData } from '@/entities/Article';
