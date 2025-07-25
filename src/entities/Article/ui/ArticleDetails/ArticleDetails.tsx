@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { DynamicModuleLoader, ReducerList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { Text, TextAlign, TextSize } from '@/shared/ui/TextSize';
+import { Text, TextAlign, TextSize } from '@/shared/ui/Text';
 
 import { Skeleton } from '@/shared/ui/Skeleton';
 import { Avatar } from '@/shared/ui/Avatar';
