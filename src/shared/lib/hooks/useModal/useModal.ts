@@ -7,6 +7,12 @@ interface UseModalProps {
     isOpen?: boolean;
     animationDelay: number;
 }
+/**
+ * Переиспользуеммый хук для модальных компонентов
+ * @param animationDelay
+ * @param isOpen
+ * @param onClose
+ */
 
 export function useModal(props: UseModalProps) {
     const {
